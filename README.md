@@ -1,4 +1,5 @@
 # Deep Bilateral Learning for Real-Time Image Enhancements
+
 Siggraph 2017
 
 Visit our [Project Page](https://groups.csail.mit.edu/graphics/hdrnet/).
@@ -11,7 +12,7 @@ Fredo Durand
 
 Maintained by Michael Gharbi (<gharbi@mit.edu>)
 
-Tested on Python 2.7, Ubuntu 14.0, gcc-4.8.
+Tested on Python 2.7, Ubuntu 18.0, gcc-5.0, libcudnn5, cuda8.0.
 
 ## Disclaimer
 
@@ -74,7 +75,7 @@ You can monitor the training process using Tensorboard:
 
 To run a trained model on a novel image (or set of images), use:
 
-    ./hdrnet/bin/run.py <checkpoint_dir> <path/to_eval_data> <output_dir>
+    ./hdrnet/train.py <checkpoint_dir> <path/to_eval_data> <output_dir>
 
 To prepare a model for use on mobile, freeze the graph, and optimize the network:
 
@@ -84,16 +85,16 @@ To prepare a model for use on mobile, freeze the graph, and optimize the network
 You will need to change the `${TF_BASE}` environment variable in `./hdrnet/bin/scripts/optimize_graph.sh`
 and compile the necessary tensorflow command line tools for this (automated in the script).
 
-
 ## Android prototype
 
 We will add it to this repo soon.
 
 ## Known issues and limitations
 
-* The BilateralSliceApply operation is GPU only at this point. We do not plan on releasing a CPU implementation.
-* The provided pre-trained models were updated from an older version and might slightly differ from the models used for evaluation in the paper.
-* The pre-trained HDR+ model expects as input a specially formatted 16-bit linear input. In summary, starting from Bayer RAW:
+- The BilateralSliceApply operation is GPU only at this point. We do not plan on releasing a CPU implementation.
+- The provided pre-trained models were updated from an older version and might slightly differ from the models used for evaluation in the paper.
+- The pre-trained HDR+ model expects as input a specially formatted 16-bit linear input. In summary, starting from Bayer RAW:
+
   1. Subtract black level.
   2. Apply white balance channel gains.
   3. Demosaic to RGB.
