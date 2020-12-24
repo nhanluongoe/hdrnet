@@ -1,0 +1,16 @@
+[
+  "test/ops_test.py::BilateralSliceTest::test_grid_gradient", 
+  "test/ops_test.py::BilateralSliceTest::test_grid_optimize", 
+  "test/ops_test.py::BilateralSliceTest::test_guide_gradient", 
+  "test/ops_test.py::BilateralSliceTest::test_guide_optimize", 
+  "test/ops_test.py::BilateralSliceTest::test_interpolate", 
+  "test/ops_test.py::BilateralSliceTest::test_optimize_both", 
+  "test/ops_test.py::BilateralSliceTest::test_session", 
+  "test/ops_test.py::BilateralSliceTest::test_shape_is_correct", 
+  "test/ops_test.py::BilateralSliceApplyTest::test_grid_gradient", 
+  "test/ops_test.py::BilateralSliceApplyTest::test_guide_gradient", 
+  "test/ops_test.py::BilateralSliceApplyTest::test_input_gradient", 
+  "test/ops_test.py::BilateralSliceApplyTest::test_interpolate", 
+  "test/ops_test.py::BilateralSliceApplyTest::test_session", 
+  "test/ops_test.py::BilateralSliceApplyTest::test_shape_is_correct"
+]
